@@ -13,5 +13,32 @@ Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and heig
 GOOD LUCK 😀
 */
 
-BMI_Mark = 24;
-BMI_John = 32;
+
+let john = {
+  fullName: 'John Smith',
+  mass: 63,
+  height: 1.72,
+  calcBMI: function() {
+    return this.BMI = this.mass / (this.height * this.height);
+  }
+};
+
+let mark = {
+  fullName: 'Mark Hamill',
+  mass: 67,
+  height: 1.8,
+  calcBMI: function() {
+    return this.BMI = this.mass / (this.height * this.height);
+  }
+}
+
+john.calcBMI();
+mark.calcBMI();
+
+if (john.BMI > mark.BMI) {
+  console.log(john.fullName + ' BMI: ' + john.BMI);
+} else if (mark.BMI > john.BMI) {
+  console.log(mark.fullName + ' BMI: ' + mark.BMI);
+} else {
+  console.log('Mark and John have the same BMI of ' + john.BMI);
+}
